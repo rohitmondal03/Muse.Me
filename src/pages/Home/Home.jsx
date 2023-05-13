@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import { useHref, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import Typed from 'typed.js'
 import "./Home.css"
@@ -138,17 +138,21 @@ const Home = () => {
                 </div>
 
                 <div className='social_links py-5 px-4  mt-40 border-transparent rounded-3xl flex flex-row justify-between items-center'>
-                    <h1 className='text-3xl text-yellow-400 font-bold'>Social Links</h1>
+                    <h1 className='text-4xl text-sky-400 font-bold'>Social Links</h1>
 
                     <div className='social_logo flex flex-row'>
                         {socialLogo.map(imgs => (
-                            <img
-                                src={imgs.src}
-                                alt={imgs.alt}
-                                id={imgs.alt}
-                                className='h-10 mx-5 cursor-pointer'
-                                onClick={() => { redirectToSocialLinks(imgs.link) }}
-                            />
+                            <div
+                                id={imgs.alt} 
+                                className="social_logo_img mr-36 last-of-type:mr-0"
+                            >
+                                <img
+                                    src={imgs.src}
+                                    alt={imgs.alt}
+                                    className='social_logo_img h-10 ml-2  cursor-pointer '
+                                    onClick={() => { redirectToSocialLinks(imgs.link) }}
+                                />
+                            </div>
                         ))}
                     </div>
                 </div>
