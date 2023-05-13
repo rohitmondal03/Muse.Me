@@ -1,0 +1,8 @@
+.enter {
+    height: 100vh;
+    color: white;
+}
+
+.btn:hover {
+    box-shadow: 0 0 1em rgb(202, 202, 202);
+}

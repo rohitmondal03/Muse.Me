@@ -1,0 +1,4 @@
+.navbar {
+    backdrop-filter: blur(1rem);
+    z-index: 1;
+}
