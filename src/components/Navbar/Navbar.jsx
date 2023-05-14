@@ -1,12 +1,12 @@
 import React from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import "./Navbar.css"
 import logo_img from "../../assets/logo.png"
 
 
 
-const Navbar = () => {
+const Navbar = (props) => {
 
     const navigate = useNavigate();
 
@@ -33,7 +33,7 @@ const Navbar = () => {
 
     return (
         <motion.nav
-            className='navbar fixed bg-transparent text-white px-10 py-5 flex flex-row justify-around items-center z-10'
+            className={`navbar ${props.pos} bg-${props.color} text-${props.textColor} px-10 py-5 flex flex-row justify-around items-center z-10`}
             initial={{ width: '0%' }}
             animate={{ width: '100%' }}
             transition={{ duration: 0.75, }}
@@ -41,7 +41,7 @@ const Navbar = () => {
         >
             <div
                 className='logo flex flex-row items-center justify-evenly cursor-pointer'
-                onClick={() => { navigate("/home") }}
+                onClick={() => { navigate("/") }}
             >
                 <img
                     src={logo_img}
@@ -56,7 +56,8 @@ const Navbar = () => {
                     {navitems.map(data => (
                         <li
                             key={data.title}
-                            className='px-8 text-2xl cursor-pointer transition hover:text-teal-300 first-letter:text-4xl first-letter:font-semibold'
+                            className='px-8 text-2xl cursor-pointer transition hover:text-indigo-400 first-letter:text-4xl first-letter:font-semibold'
+                            onClick={() => {navigate(data.redirect)}}
                         >
                             {data.title}
                         </li>

@@ -72,17 +72,26 @@ const Home = () => {
 
         <>
 
-            <Navbar />
+            <Navbar 
+                pos= "fixed"
+                color= "transparent"
+                textColor= "white"
+            />
 
             <motion.div
                 className='home p-28 text-white'
-                initial={{ width: '0%' }}
-                animate={{ width: '100%' }}
+                initial={{ width: '0%', }}
+                animate={{ width: '100%', }}
                 transition={{ duration: 1.5, ease: 'easeOut' }}
                 exit={{ x: window.innerWidth, transition: { duration: 0.75 } }}
             >
 
-                <div className='home_page flex flex-row justify-between items-center'>
+                <motion.div
+                    className='home_page flex flex-row justify-between items-center'
+                    initial={{ opacity: 0 }}
+                    transition={{ duration: 1.5, delay: 1.25 }}
+                    animate={{ opacity: 1 }}
+                >
 
                     {/* LEFT SCTIONS */}
                     <div className='home_text mr-5 w-1/2'>
@@ -101,7 +110,7 @@ const Home = () => {
                         </h1>
 
                         <button
-                            className='home_btn text-white bg-transparent lg:mt-40 sm:text-xl md:text-xl lg:text-2xl xl:text-3xl hover:text-yellow-400'
+                            className='home_btn text-yellow-400 bg-transparent lg:mt-40 sm:text-xl md:text-xl lg:text-2xl xl:text-3xl hover:text-slate-200'
                             onClick={() => { navigate('/gallery') }}
                         >
                             Start Now
@@ -135,15 +144,21 @@ const Home = () => {
                         </p>
                     </div>
 
-                </div>
+                </motion.div>
 
-                <div className='social_links py-5 px-4  mt-40 border-transparent rounded-3xl flex flex-row justify-between items-center'>
-                    <h1 className='text-4xl text-sky-400 font-bold'>Social Links</h1>
+                <motion.div
+                    className='social_links py-5 px-4  mt-40 border-transparent rounded-3xl flex flex-row justify-between items-center'
+                    initial={{ opacity: 0 }}
+                    transition={{ duration: 0.5 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{once: true}}
+                >
+                    <h1 className='text-4xl text-white '>Social Links</h1>
 
                     <div className='social_logo flex flex-row'>
                         {socialLogo.map(imgs => (
                             <div
-                                id={imgs.alt} 
+                                id={imgs.alt}
                                 className="social_logo_img mr-36 last-of-type:mr-0"
                             >
                                 <img
@@ -155,7 +170,7 @@ const Home = () => {
                             </div>
                         ))}
                     </div>
-                </div>
+                </motion.div>
 
 
             </motion.div>

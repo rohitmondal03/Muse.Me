@@ -1,3 +1,20 @@
+# About the Project
+
+This project `Muse.Me` is a simple website, that unleashes my best moments in my life. Whether be it, fest of college, any small trip I've done or any moments of life that I want to cherish in my heart. 
+
+About tech stacks, I've used ReactJS, Tailwind CSS, Framer motion for animations. Apart from that, for routing and navigation purposes, I've used `react-router-dom` [https://reactrouter.com/web/guides/quick-start.] that is easy to integrate and apply in React aplications.  
+
+
+### Github link
+https://github.com/rohitmondal03/Muse.Me
+
+
+### Website link
+--------------------------
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
