@@ -1,13 +1,34 @@
 import React from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
+import "./PhotoGallery.css"
+import Navbar from "../../components/Navbar/Navbar"
 
 const PhotoGallery = () => {
+
+
+  // FOR BG COLOR OF BOTH NAVBAR AND MAIN COMPONENT
+  const bgColor= "bg-slate-500"
+
+
   return (
+    <>
+
+      <Navbar 
+        pos= "static"
+        bgColor= {bgColor}
+        textColor= "text-red-400"
+        hoverColor= "hover:text-orange-100"
+      />
+
       <motion.div
-        className='bg-slate-500 h-screen'
+        className={`gallery_sec ${bgColor} text-center  text-white h-screen py-20`}
       >
-        PhotoGallery
+        <h1 className='text-6xl'>Rohit's Gallery !!!</h1>
+
+        <p>Welcome peeps</p>
       </motion.div>
+
+    </>
   )
 }
 

@@ -74,8 +74,9 @@ const Home = () => {
 
             <Navbar 
                 pos= "fixed"
-                color= "transparent"
-                textColor= "white"
+                bgColor= "bg-transparent"
+                textColor= "text-white"
+                hoverColor= "hover:text-indigo-400"
             />
 
             <motion.div
@@ -97,7 +98,7 @@ const Home = () => {
                     <div className='home_text mr-5 w-1/2'>
 
                         <h1
-                            className='small_text text-teal-500 font-bold mt-20 sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl'
+                            className='small_text text-green-500 font-bold mt-20 sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl'
                         >
                             #<span ref={e}></span>
                         </h1>

@@ -33,7 +33,7 @@ const Navbar = (props) => {
 
     return (
         <motion.nav
-            className={`navbar ${props.pos} bg-${props.color} text-${props.textColor} px-10 py-5 flex flex-row justify-around items-center z-10`}
+            className={`navbar ${props.pos} ${props.bgColor} ${props.textColor} px-10 py-5 flex flex-row justify-around items-center z-10`}
             initial={{ width: '0%' }}
             animate={{ width: '100%' }}
             transition={{ duration: 0.75, }}
@@ -56,7 +56,7 @@ const Navbar = (props) => {
                     {navitems.map(data => (
                         <li
                             key={data.title}
-                            className='px-8 text-2xl cursor-pointer transition hover:text-indigo-400 first-letter:text-4xl first-letter:font-semibold'
+                            className={`px-8 text-2xl cursor-pointer transition ${props.hoverColor} first-letter:text-4xl first-letter:font-semibold`}
                             onClick={() => {navigate(data.redirect)}}
                         >
                             {data.title}
