@@ -72,11 +72,12 @@ const Home = () => {
 
         <>
 
-            <Navbar 
-                pos= "fixed"
-                bgColor= "bg-transparent"
-                textColor= "text-white"
-                hoverColor= "hover:text-indigo-400"
+            <Navbar
+                pos="fixed"
+                bgColor="bg-transparent"
+                textColor="text-yellow-400"
+                hoverColor="hover:text-orange-100"
+                className='hidden'
             />
 
             <motion.div
@@ -152,7 +153,7 @@ const Home = () => {
                     initial={{ opacity: 0 }}
                     transition={{ duration: 0.5 }}
                     whileInView={{ opacity: 1 }}
-                    viewport={{once: true}}
+                    viewport={{ once: true }}
                 >
                     <h1 className='text-4xl text-white '>Social Links</h1>
 
