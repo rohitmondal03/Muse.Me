@@ -7,16 +7,20 @@ const galleryData= [
     {
         title: "Trip to Bhilai",
         imgSrc: bhilaiHead_img,
+        dynamicLink: "trip-to-bhilai",
     },
 
     {
         title: "Night out",
         imgSrc: nightoutHead_img,
+        dynamicLink: "night-out",
     },
 
     {
         title: "Eclectika '23",
         imgSrc: eclectikaHead_img,
+        dynamicLink: "eclectika-2023",
+
     },
 ]
 

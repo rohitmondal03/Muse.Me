@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const GalleryTemplate = (props) => {
   return (
-    <Link to=''>
+    <Link to={`/gallery/${props.dynamicLink}`}>
       <div className='gallery_sec_indivisual mx-5 my-12 border-zinc-300 border-4 rounded-2xl p-10 transition duration-300 hover:scale-105'>
         <img
           src={props.src}

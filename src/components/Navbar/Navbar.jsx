@@ -19,12 +19,7 @@ const Navbar = (props) => {
         },
 
         {
-            title: "Memories",
-            redirect: "/memories",
-        },
-
-        {
-            title: "Photo Gallery",
+            title: "Gallery",
             redirect: "/gallery"
         },
     ]

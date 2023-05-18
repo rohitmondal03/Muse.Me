@@ -85,6 +85,7 @@ const PhotoGallery = () => {
             <GalleryTemplate
               title={data.title}
               src={data.imgSrc}
+              dynamicLink= {data.dynamicLink}
             />
           ))}
 
