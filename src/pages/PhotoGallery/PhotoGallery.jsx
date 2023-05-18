@@ -2,9 +2,11 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import "./PhotoGallery.css"
 import Navbar from "../../components/Navbar/Navbar"
+import galleryData from './galleryData'
+import GalleryTemplate from './GalleryTemplate'
+
 
 const PhotoGallery = () => {
-
 
   // FOR BG COLOR OF BOTH NAVBAR AND MAIN COMPONENT
   const bgColor = "bg-slate-500"
@@ -16,30 +18,38 @@ const PhotoGallery = () => {
       <Navbar
         pos="fixed"
         bgColor="bg-transparent"
-        textColor="text-yellow-400"
-        hoverColor="hover:text-rose-400"
-        className='hidden'
+        textColor="text-slate-300"
+        hoverColor="hover:text-amber-300"
       />
 
 
       <motion.div
-        className={`gallery_sec ${bgColor} text-center h-screen py-40`}
+        className={`gallery_sec ${bgColor} text-white text-center py-40`}
+        initial={{ width: '0%', }}
+        animate={{ width: '100%', }}
+        transition={{ duration: 1.5, ease: 'easeOut' }}
+        exit={{ x: window.innerWidth, transition: { duration: 0.75 } }}
       >
 
 
 
         {/* TEXT SECTION */}
 
-        <div className='gallery_sec_text'>
+        <motion.div
+          className='gallery_sec_text border-2 border-slate-300 rounded-xl'
+          initial={{ opacity: 0 }}
+          transition={{ duration: 1.5, delay: 1.5 }}
+          animate={{ opacity: 1 }}
+        >
 
           <h1
-            className='text-7xl my-10 text-rose-600 font-bold'
+            className='text-7xl my-10 text-red-500 font-bold spacin'
           >
-            Momentos...
+            Frames...
           </h1>
 
           <p
-            className='my-10 mx-auto text-xl text-white w-4/5'
+            className='my-10 mx-auto text-xl w-4/5'
           >
 
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at varius ipsum. Quisque vel est sollicitudin lectus sollicitudin varius. Aliquam diam ante, placerat vitae leo eget, tincidunt luctus ligula. Ut mi nibh, finibus vitae lobortis iaculis, elementum in lectus. Suspendisse potenti. Ut id ligula elit. Sed posuere risus urna, vitae luctus metus ullamcorper tincidunt.
@@ -49,14 +59,35 @@ const PhotoGallery = () => {
             Morbi sit amet sem sodales, eleifend est non, porta felis. Cras tempor lacus ac ligula dignissim, ac pretium odio sollicitudin. Proin fringilla urna quis luctus sollicitudin. Cras ac maximus massa. Proin at bibendum nisi. Nullam sed.
           </p>
 
-        </div>
+        </motion.div>
 
 
 
         {/* GALLERY SECTION */}
 
-        <div className='gallery_sec_photos'>
-          // HERE GALLERY TEMPLATE WILL COMPONENT
+        <h1
+          className='gallery_sec_heading text-6xl text-orange-400 text-center font- mt-28 mb-8 first-letter:text-7xl font'
+          initial={{ opacity: 0 }}
+          transition={{ duration: 1.5, delay: 1.75 }}
+          animate={{ opacity: 1 }}
+        >
+          Welcome to Gallery
+        </h1>
+
+        <div
+          className='gallery_sec_photos flex flex-row flex-wrap justify-center items-center'
+          initial={{ opacity: 0 }}
+          transition={{ duration: 1.5, delay: 1.75 }}
+          animate={{ opacity: 1 }}
+        >
+
+          {galleryData.map(data => (
+            <GalleryTemplate
+              title={data.title}
+              src={data.imgSrc}
+            />
+          ))}
+
         </div>
 
       </motion.div>

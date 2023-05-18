@@ -75,9 +75,8 @@ const Home = () => {
             <Navbar
                 pos="fixed"
                 bgColor="bg-transparent"
-                textColor="text-yellow-400"
-                hoverColor="hover:text-orange-100"
-                className='hidden'
+                textColor="text-zinc-200"
+                hoverColor="hover:text-violet-400"
             />
 
             <motion.div
@@ -99,7 +98,7 @@ const Home = () => {
                     <div className='home_text mr-5 w-1/2'>
 
                         <h1
-                            className='small_text text-green-500 font-bold mt-20 sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl'
+                            className='small_text text-sky-400 font-bold mt-20 sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl'
                         >
                             #<span ref={e}></span>
                         </h1>
@@ -121,12 +120,12 @@ const Home = () => {
                     </div>
 
                     {/* RIGHT SECTIONS */}
-                    <div className='home_abt px-5 py-3 w-1/2 h-96 text-zinc-100 overflow-y-scroll overflow-auto border-4 border-red-300 rounded-xl'>
+                    <div className='home_abt px-5 py-3 w-1/2 h-96 overflow-y-scroll overflow-auto border-4 border-red-300 rounded-xl'>
 
                         <h1
-                            className='text-5xl my-3 font-bold text-yellow-500'
+                            className='text-5xl my-3 font-old text-rose-500'
                         >
-                            Welcome to Muse.Me
+                            Welcome to <span className='text-6xl font-bold text-rose-600 underline'>Muse.Me</span>
                         </h1>
 
                         <p

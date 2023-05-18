@@ -1,7 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+
+
+:root {
+    --font-family: 'Playfair Display', serif;
+}
+
 .gallery_sec {
-    background-image: url('../../assets/ECLECTIKA\ _23/IMG_20230212_215217.jpg');
+    /* background-image: url('../../assets/ECLECTIKA\ _23/IMG_20230212_215217.jpg'); */
+    background-image: url("../../assets/ECLECTIKA\ _23//IMG_3389.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-blend-mode: multiply;
 }
+
+.gallery_sec_text h1 {
+    font-family: var(--font-family);
+}
+
+
+
+/* GALLERY SECTION WHERE ALL PHOTOS ARE SHOWN */
+
+.gallery_sec_heading {
+    font-family: 'Lora', serif;
+}
+
+.gallery_sec_indivisual {
+    backdrop-filter: blur(20px);
+}
+
+.gallery_sec_indivisual h1 {
+    font-family: 'Satisfy', cursive;
+}
+

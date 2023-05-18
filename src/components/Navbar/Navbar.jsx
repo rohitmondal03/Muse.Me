@@ -36,8 +36,8 @@ const Navbar = (props) => {
             className={`navbar ${props.pos} ${props.bgColor} ${props.textColor} px-10 py-5 flex flex-row justify-around items-center z-10`}
             initial={{ width: '0%' }}
             animate={{ width: '100%' }}
-            transition={{ duration: 0.75, }}
-            exit={{ x: window.innerWidth, transition: { duration: 0.5 } }}
+            transition={{ duration: 1.5, }}
+            exit={{ x: window.innerWidth, transition: { duration: 0.75 } }}
         >
             <div
                 className='logo flex flex-row items-center justify-evenly cursor-pointer'
