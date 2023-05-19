@@ -8,7 +8,7 @@ const Enter = () => {
 
     return (
         <motion.div
-            className='enter bg-black flex flex-col items-center'
+            className='enter bg-black flex flex-col items-center justify-center'
             initial={{ width: '0%' }}
             animate={{ width: '100%' }}
             transition={{ duration: 0.75, }}

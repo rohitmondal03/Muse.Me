@@ -80,7 +80,7 @@ const Home = () => {
             />
 
             <motion.div
-                className='home p-28 text-white'
+                className='home p-28 flex flex-col items-center justify-center text-white'
                 initial={{ width: '0%', }}
                 animate={{ width: '100%', }}
                 transition={{ duration: 1.5, ease: 'easeOut' }}
@@ -98,13 +98,13 @@ const Home = () => {
                     <div className='home_text mr-5 w-1/2'>
 
                         <h1
-                            className='small_text text-sky-400 font-bold mt-20 sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl'
+                            className='small_text text-yellow-400 font-bold mt-20 sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl'
                         >
                             #<span ref={e}></span>
                         </h1>
 
                         <h1
-                            className='text-white font-bold my-8 sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl'
+                            className='text-white font-bold my-8 sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl tracking-wider leading-10 sm:tracking-wide'
                         >
                             It's only worth it,
                             if you can enjoy it.
@@ -134,14 +134,6 @@ const Home = () => {
                             Welcome to my personal gallery website! Here, you will find a diverse collection of my artwork, showcasing my passion for creativity and expression. From paintings and drawings to digital art and photography, I aim to explore various mediums and styles to create something unique and captivating.
 
                             My journey as an artist has been shaped by a variety of influences, including the natural world, different cultures, and the people around me. Each piece of artwork is a reflection of my personal experiences and emotions, and I hope that it resonates with those who view it.
-
-                            In addition to traditional painting and drawing, I also enjoy exploring digital art. With technology constantly evolving, it opens up new possibilities for creativity and experimentation. Through digital art, I can create intricate designs and manipulate images in ways that would not be possible with traditional mediums.
-
-                            Photography is also an important aspect of my artwork. I love to capture the beauty and essence of the world around me through my camera lens. Whether it's the vibrant colors of a sunset or the intricate details of a flower, photography allows me to freeze a moment in time and share it with others.
-
-                            As you browse through my gallery, I hope that you find inspiration and joy in my artwork. Whether you are a fellow artist, art enthusiast, or simply appreciate the beauty of creativity, I welcome you to explore my collection and experience the world through my eyes.
-
-                            Thank you for visiting my personal gallery website, and I hope that you enjoy the journey through my artwork as much as I have enjoyed creating it.
                         </p>
                     </div>
 
@@ -165,7 +157,7 @@ const Home = () => {
                                 <img
                                     src={imgs.src}
                                     alt={imgs.alt}
-                                    className='social_logo_img h-10 ml-2  cursor-pointer '
+                                    className='social_logo_img h-10 cursor-pointer '
                                     onClick={() => { redirectToSocialLinks(imgs.link) }}
                                 />
                             </div>

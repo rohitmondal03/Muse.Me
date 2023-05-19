@@ -1,6 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import galleryData from '../PhotoGallery/galleryData';
+import galleryData from "../PhotoGallery/galleryData"
+import ErrorPage from "../../components/ErrorPage"
 
 const DynamicGallery = () => {
 
@@ -14,11 +15,20 @@ const DynamicGallery = () => {
                 <h1 className='text-black'>{data.title}</h1>
                 <img
                     src={data.imgSrc}
+                    alt='head-img'
                 />
+                <div>
+                    <div>{data.imagesArray.map(img => (
+                        <img 
+                            src={img}
+                            alt='gallery-photos'
+                        />
+                    ))}</div>
+                </div>
             </>
             :
             <>
-                <h1>No data found</h1>
+                <ErrorPage />
             </>
     )
 }
