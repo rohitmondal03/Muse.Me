@@ -1,15 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import "./PhotoGallery.css"
 import Navbar from "../../components/Navbar/Navbar"
 import galleryData from './galleryData'
 import GalleryTemplate from './GalleryTemplate'
+import Rellax from 'rellax'
 
 
 const PhotoGallery = () => {
 
-  // FOR BG COLOR OF BOTH NAVBAR AND MAIN COMPONENT
-  const bgColor = "bg-slate-500"
+  useEffect(() => {
+    var rellax = new Rellax('.rellax');
+  })
+
 
 
   return (
@@ -24,7 +27,7 @@ const PhotoGallery = () => {
 
 
       <motion.div
-        className={`gallery_sec ${bgColor} text-white text-center py-40`}
+        className={`gallery_sec rellax bg-slate-500 text-white text-center py-40`}
         initial={{ width: '0%', }}
         animate={{ width: '100%', }}
         transition={{ duration: 1.5, ease: 'easeOut' }}
@@ -36,7 +39,8 @@ const PhotoGallery = () => {
         {/* TEXT SECTION */}
 
         <motion.div
-          className='gallery_sec_text border-2 border-slate-300 rounded-xl'
+          className='gallery_sec_text rellax border-2 border-slate-300 rounded-xl'
+          data-rellax-speed="6"
           initial={{ opacity: 0 }}
           transition={{ duration: 1.5, delay: 1.5 }}
           animate={{ opacity: 1 }}
@@ -65,34 +69,39 @@ const PhotoGallery = () => {
 
         {/* GALLERY SECTION */}
 
-        <h1
-          className='gallery_sec_heading text-6xl text-orange-400 text-center font- mt-28 mb-8 first-letter:text-7xl font'
-          initial={{ opacity: 0 }}
-          transition={{ duration: 1.5, delay: 1.75 }}
-          animate={{ opacity: 1 }}
-        >
-          Welcome to Gallery
-        </h1>
+        <div>
 
-        <div
-          className='gallery_sec_photos flex flex-row flex-wrap justify-center items-center'
-          initial={{ opacity: 0 }}
-          transition={{ duration: 1.5, delay: 1.75 }}
-          animate={{ opacity: 1 }}
-        >
+          <h1
+            className='gallery_sec_heading rellax text-6xl text-orange-400 text-center font- mt-28 mb-8 first-letter:text-7xl font'
+            data-rellax-speed="2"
+            initial={{ opacity: 0 }}
+            transition={{ duration: 1.5, delay: 1.75 }}
+            animate={{ opacity: 1 }}
+          >
+            Welcome to Gallery
+          </h1>
 
-          {galleryData.map(data => (
-            <GalleryTemplate
-              title={data.title}
-              src={data.imgSrc}
-              dynamicLink= {data.dynamicLink}
-            />
-          ))}
+          <div
+            className='gallery_sec_photos rellax flex flex-row flex-wrap justify-center items-center'
+            data-rellax-speed="10"
+            initial={{ opacity: 0 }}
+            transition={{ duration: 1.5, delay: 1.75 }}
+            animate={{ opacity: 1 }}
+          >
+
+            {galleryData.map(data => (
+              <GalleryTemplate
+                title={data.title}
+                src={data.imgSrc}
+                dynamicLink={data.dynamicLink}
+              />
+            ))}
+
+          </div>
 
         </div>
 
       </motion.div>
-
 
     </>
   )

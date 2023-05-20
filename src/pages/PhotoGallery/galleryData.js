@@ -21,20 +21,23 @@ const galleryData= [
         imgSrc: bhilaiHead_img,
         dynamicLink: "trip-to-bhilai",
         imagesArray: bhilaiTripPhotos,
+        abt: "",
     },
-
+    
     {
         title: "Night out",
         imgSrc: nightoutHead_img,
         dynamicLink: "night-out",
         imagesArray: nightoutPhotos,
+        abt: "",
     },
-
+    
     {
         title: "Eclectika '23",
         imgSrc: eclectikaHead_img,
         dynamicLink: "eclectika-2023",
         imagesArray: eclectika23Photos,
+        abt: "",
     },
 ]
 

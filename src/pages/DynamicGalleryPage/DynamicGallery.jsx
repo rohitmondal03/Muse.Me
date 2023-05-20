@@ -12,18 +12,20 @@ const DynamicGallery = () => {
         data
             ?
             <>
-                <h1 className='text-black'>{data.title}</h1>
-                <img
-                    src={data.imgSrc}
-                    alt='head-img'
-                />
-                <div>
-                    <div>{data.imagesArray.map(img => (
-                        <img 
-                            src={img}
-                            alt='gallery-photos'
-                        />
-                    ))}</div>
+                <div className='dyn_gallery_sec_text'>
+                    <h1 className='text-black'>{data.title}</h1>
+                </div>
+
+                <div className='dyn_gallery_sec_img'>
+                    <div>
+                        {data.imagesArray.map(img => (
+                            <img
+                                src={img}
+                                alt='gallery-photos'
+                                className='h-96 w-fit'
+                            />
+                        ))}
+                    </div>
                 </div>
             </>
             :

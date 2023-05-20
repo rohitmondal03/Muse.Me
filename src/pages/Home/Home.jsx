@@ -139,25 +139,29 @@ const Home = () => {
 
                 </motion.div>
 
+
+
+                {/* SOCIAL LINKS SECTION */}
+
                 <motion.div
-                    className='social_links py-5 px-4  mt-40 border-transparent rounded-3xl flex flex-row justify-between items-center'
+                    className='social_links py-5 px-10 mt-32 w-full border-transparent rounded-3xl flex flex-row justify-between items-center'
                     initial={{ opacity: 0 }}
                     transition={{ duration: 0.5 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
                 >
-                    <h1 className='text-4xl text-white '>Social Links</h1>
+                    <h1 className='text-4xl text-violet-300 font-semibold '>Social Links</h1>
 
                     <div className='social_logo flex flex-row'>
                         {socialLogo.map(imgs => (
                             <div
                                 id={imgs.alt}
-                                className="social_logo_img mr-36 last-of-type:mr-0"
+                                className="social_logo_img mr-36 pl-2 last-of-type:mr-0"
                             >
                                 <img
                                     src={imgs.src}
                                     alt={imgs.alt}
-                                    className='social_logo_img h-10 cursor-pointer '
+                                    className='social_logo_img h-10 cursor-pointer'
                                     onClick={() => { redirectToSocialLinks(imgs.link) }}
                                 />
                             </div>
