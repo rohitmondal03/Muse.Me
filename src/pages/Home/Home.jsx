@@ -76,7 +76,7 @@ const Home = () => {
                 pos="fixed"
                 bgColor="bg-transparent"
                 textColor="text-zinc-200"
-                hoverColor="hover:text-violet-400"
+                hoverProps="hover:text-violet-400"
             />
 
             <motion.div
@@ -150,7 +150,7 @@ const Home = () => {
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
                 >
-                    <h1 className='text-4xl text-violet-300 font-semibold '>Social Links</h1>
+                    <h1 className='text-4xl font-semibold '>Social Links</h1>
 
                     <div className='social_logo flex flex-row'>
                         {socialLogo.map(imgs => (

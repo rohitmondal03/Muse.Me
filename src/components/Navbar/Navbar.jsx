@@ -48,15 +48,17 @@ const Navbar = (props) => {
 
             <div className='nav_items'>
                 <ul className='flex flex-row items-center justify-around'>
-                    {navitems.map(data => (
-                        <li
-                            key={data.title}
-                            className={`px-8 text-2xl cursor-pointer transition ${props.hoverColor} first-letter:text-4xl first-letter:font-semibold`}
-                            onClick={() => {navigate(data.redirect)}}
-                        >
-                            {data.title}
-                        </li>
-                    ))}
+                    {navitems.map(data => {
+                        return (
+                            <li
+                                key={data.title}
+                                className={`px-8 text-2xl cursor-pointer transition ${props.hoverProps} first-letter:text-4xl first-letter:font-semibold`}
+                                onClick={() => { navigate(data.redirect) } }
+                            >
+                                {data.title}
+                            </li>
+                        )
+                    })}
                 </ul>
             </div>
         </motion.nav>

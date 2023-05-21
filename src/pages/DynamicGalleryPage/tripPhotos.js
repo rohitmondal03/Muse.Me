@@ -34,7 +34,7 @@ import imgE12 from "../../assets/ECLECTIKA _23/IMG_3389.jpg"
 export const bhilaiTripPhotos = [imgB1, imgB2, imgB3, imgB4, imgB6, imgB5, imgB7, imgB8, imgB9];
 
 
-export const eclectika23Photos = [imgE1, imgE2, imgE3, imgE4, imgE5, imgE6, imgE7, imgE8, imgE9, imgE10, imgE11, imgE12]
+export const eclectika23Photos = [imgE2, imgE5, imgE6, imgE3, imgE4, imgE7, imgE8, imgE9, imgE10, imgE11, imgE12, imgE1, ]
 
 
 export const nightoutPhotos = [imgN1, imgN2, imgN3];

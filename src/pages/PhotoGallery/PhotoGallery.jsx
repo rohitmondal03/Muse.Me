@@ -22,7 +22,7 @@ const PhotoGallery = () => {
         pos="fixed"
         bgColor="bg-transparent"
         textColor="text-slate-300"
-        hoverColor="hover:text-amber-300"
+        hoverProps="hover:text-amber-300"
       />
 
 
