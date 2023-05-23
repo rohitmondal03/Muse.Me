@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
 
 
 
@@ -26,7 +27,7 @@
 /* GALLERY SECTION WHERE ALL PHOTOS ARE SHOWN */
 
 .gallery_sec_heading {
-    font-family: 'Lora', serif;
+    font-family: 'Alata', sans-serif;
 }
 
 .gallery_sec_indivisual {
@@ -34,6 +35,6 @@
 }
 
 .gallery_sec_indivisual h1 {
-    font-family: 'Satisfy', cursive;
+    font-family: 'Alata', sans-serif;
 }
 

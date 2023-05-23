@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-// import Rellax from 'rellax'
 
 const GalleryTemplate = (props) => {
   return (
@@ -13,8 +12,7 @@ const GalleryTemplate = (props) => {
           className='main_img h-96 w-auto mx-auto rounded-2xl'
           alt='head-img'
         />
-        <h1 className='text-5xl text-amber-400 mt-12'>{props.title}</h1>
-        {/* <button>Open {props.title} gallery</button> */}
+        <h1 className='text-5xl text-red-500 mt-12'>{props.title}</h1>
       </div>
     </Link>
   )
